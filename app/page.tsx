@@ -391,11 +391,17 @@ export default function AutoIALanding() {
                       <header className="mb-4">
                         <h3 className="text-xl font-bold dark:text-white mb-2">{useCase.title}</h3>
                         <Badge
-                          className={`w-fit bg-${useCase.badgeColor}-100 text-${useCase.badgeColor}-800 dark:bg-${useCase.badgeColor}-900 dark:text-${useCase.badgeColor}-100`}
+                          className={
+                            useCase.title === "Restaurante Local"
+                              ? "w-fit bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-100 font-medium px-2 py-1 rounded"
+                              : useCase.title === "Clínica Dental"
+                              ? "w-fit bg-purple-100 text-purple-800 dark:bg-purple-700 dark:text-white font-medium px-2 py-1 rounded"
+                              : "w-fit bg-orange-100 text-orange-800 dark:bg-orange-700 dark:text-white font-medium px-2 py-1 rounded"
+                          }
                         >
                           {useCase.badge}
                         </Badge>
-                        
+
                       </header>
                       <p className="text-gray-600 dark:text-gray-300 mb-4">{useCase.description}</p>
                       <motion.div
