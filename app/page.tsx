@@ -560,7 +560,12 @@ export default function AutoIALanding() {
                         </CardDescription>
                       </CardHeader>
                       <CardContent>
-                        <form onSubmit={handleSubmit} className="space-y-6" noValidate>
+                        <form
+                          action="https://formsubmit.co/mcamponiglesias@gmail.com"
+                          method="POST"
+                          className="space-y-6"
+                          noValidate
+                        >
                           <motion.div whileFocus={{ scale: 1.02 }} transition={{ duration: 0.2 }}>
                             <label htmlFor="name" className="sr-only">
                               Nombre
@@ -569,8 +574,6 @@ export default function AutoIALanding() {
                               id="name"
                               name="name"
                               placeholder="Tu nombre"
-                              value={formData.name}
-                              onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                               required
                               className="h-12 dark:bg-gray-700 dark:border-gray-600 transition-all duration-300 focus:ring-2 focus:ring-emerald-500"
                               aria-describedby="name-error"
@@ -585,8 +588,6 @@ export default function AutoIALanding() {
                               name="email"
                               type="email"
                               placeholder="Tu email"
-                              value={formData.email}
-                              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                               required
                               className="h-12 dark:bg-gray-700 dark:border-gray-600 transition-all duration-300 focus:ring-2 focus:ring-emerald-500"
                               aria-describedby="email-error"
@@ -600,15 +601,13 @@ export default function AutoIALanding() {
                               id="message"
                               name="message"
                               placeholder="Cuéntame sobre tu negocio y qué te gustaría automatizar..."
-                              value={formData.message}
-                              onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                               required
                               rows={5}
                               className="dark:bg-gray-700 dark:border-gray-600 transition-all duration-300 focus:ring-2 focus:ring-emerald-500"
                               aria-describedby="message-error"
                             />
                           </motion.div>
-                          <motion.div whileHover={scaleOnHover} whileTap={{ scale: 0.95 }}>
+                          <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.95 }}>
                             <Button
                               type="submit"
                               className="w-full bg-emerald-600 hover:bg-emerald-700 text-white h-12 text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
@@ -618,6 +617,7 @@ export default function AutoIALanding() {
                             </Button>
                           </motion.div>
                         </form>
+
                       </CardContent>
                     </Card>
                   </motion.div>
