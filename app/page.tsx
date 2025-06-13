@@ -395,6 +395,7 @@ export default function AutoIALanding() {
                         >
                           {useCase.badge}
                         </Badge>
+                        
                       </header>
                       <p className="text-gray-600 dark:text-gray-300 mb-4">{useCase.description}</p>
                       <motion.div
